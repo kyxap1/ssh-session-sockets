@@ -15,7 +15,7 @@ do
   socket="${sockdir}${s}"
 
   if [[ -S ${socket} ]]; then
-    echo ssh -O stop "${name}"
+    ssh -O stop "${name}"
   else
     echo error! >&2
     exit 1
